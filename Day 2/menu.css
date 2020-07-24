@@ -1,0 +1,14 @@
+
+#container{
+    background-color: blue;
+    width: 60%;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+a{
+    color: white;
+    text-transform: uppercase;
+}

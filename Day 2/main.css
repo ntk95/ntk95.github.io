@@ -1,0 +1,46 @@
+/*Cac thuoc tinh trong file CSS*/
+h1{
+    color:red; 
+    background-color:blue;
+    text-align: center;
+}
+
+h2{
+    color:violet;
+    text-align: center;
+    text-transform: uppercase;
+    background-color:green;
+}
+p{
+    color: chocolate;
+    font-size: 20px;
+    text-align: center;
+}
+
+.paragraph{
+    background-color: burlywood;
+    color: red;
+    
+}
+
+.paragraph2{
+    color:green;
+    background-color: cyan;
+}
+
+.paragraph3{
+    color:cornsilk;
+    background-color: gold;
+    font-weight: 700;
+}
+
+.paragraph4{
+    color:green;
+    background-color: black;
+}
+
+h3,h4{
+    color: brown;
+    text-decoration: line-through;
+    text-align: center;
+}
