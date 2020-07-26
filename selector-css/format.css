@@ -1,0 +1,32 @@
+.canGiua{
+    text-align: center;
+}
+
+.canPhai{
+    text-align: right;
+}
+
+#khauhieuVN{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#tuGioiThieu{
+    text-align: justify;
+}
+
+#diaDanhvaThoiGian{
+    text-align: right;
+    margin-right: 30px;    
+}
+
+#nguoiLamDon{
+    text-align: right;
+    margin-right: 90px;  
+}
+
+#chuKyVaTen{
+    text-align: right;
+    margin-right: 110px; 
+}
