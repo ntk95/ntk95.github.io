@@ -1,0 +1,100 @@
+
+.column { 
+    float: left;
+    width: 150px;
+    padding: 50px;
+    height: 400px; 
+}
+  
+
+.row { 
+    padding: 30px;
+} 
+
+.row1 { 
+    float: right;
+    display: table;
+    clear: both;
+    padding: 30px;
+    
+} 
+
+.column1 { 
+    float: left;
+    width: 150px;
+    padding: 50px;
+    height: 400px; 
+    margin-right: 15px;
+}
+
+
+.mix1{ 
+    float: right;
+    width: 800px;
+    padding: 30px;
+    height: 450px; 
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+
+.column2 {
+    background: red;
+    width: 400px;
+    height: 400px;
+    float: left;
+}
+
+.row2,.row3 {
+    display: table;
+    height: 200px;
+    
+}
+
+.row2 {
+    background: green;
+    width: 200px;
+    height: 200px;
+}
+
+.row3 {
+    background: blue;
+    width: 200px;
+    height: 200px;
+}
+
+.mix2{ 
+    float: left;
+    width: 800px;
+    padding: 30px;
+    height: 450px; 
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+
+.column3 {
+    background: red;
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 30px;
+}
+
+.row4,.row5 {
+    display: table;
+    height: 200px;  
+}
+
+.row4 {
+    background: green;
+    width: 200px;
+    height: 200px;
+}
+
+.row5 {
+    background: blue;
+    width: 200px;
+    height: 200px;
+}
