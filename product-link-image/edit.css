@@ -1,0 +1,26 @@
+.flex{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 50px;
+    justify-content: center;
+}
+
+.margin{
+    margin: 50px;
+}
+#detail{
+    display: flex;
+    flex-direction: row;
+}
+#anh{
+    
+}
+
+#gia{
+    color: red;
+}
+#specs{
+    width=100%;
+    
+}
