@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>array</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        //Array (mang)
+        // Khai bao array
+        //1. Khai bao mang rong
+        var emptyArray = []
+        
+        //2. Khai bao mang co gia tri : nameArray[index], index tu 0 la so dau tien
+        var number = [1,2,3,4,5,6,7]
+        console.log(number[0])
+
+        var string = ["Ha Noi", "Sai Gon", "Da Nang", "Can Tho", 5, true]
+        console.log(string[2])
+
+        //Lay do dai cua mang
+        console.log(number.length);
+
+        //Lay phan tu cuoi cung
+        console.log(string[string.length - 1]);
+
+        //Thay doi gia tri tu Ha Noi >> Hai Phong
+        string[0] = "Hai Phong"
+        string[string.length-1] = false; //thay doi true >> false
+        console.log(string);
+
+        //join(): chuyen tu array -> string
+        var arrayConvertString = string.join(" - ") //noi cac phan tu
+        console.log(arrayConvertString); 
+
+        //split(): chuyen tu string -> array
+        var stringToArray = arrayConvertString.split(" - ") //tach cac phan tu
+        console.log(stringToArray);
+
+        //Dao nguoc chu
+        var name = "Nguyễn Văn A"
+        var name1 = name.split("").reverse().join("");
+        console.log(name1);
+
+        //method array
+        //1. Them phàn tu (Them vao cuoi mang)
+        //nameArray.push(ele)
+        number.push("Hai Phong")
+        console.log(number)
+
+        //Them phan tu vao dau mang
+        number.unshift("Hue")
+        console.log(number);
+
+        //Xoa phan tu
+        //Xoa o cuoi mang
+        // nameArray.pop()
+        number.pop()
+        console.log(number);
+
+        //Xoa o dau mang
+        // nameArray.shift();
+        number.shift()
+        console.log(number);
+
+        //splice(): them, xoa phan tu
+        //Them phan tu
+        var number3 = ["Ha Noi", "Sai Gon", "Da Nang", "Can Tho"]
+        number3.splice(2, 0, "Thanh Hoa", "Nghe An");
+        console.log(number3);
+        
+        number3.splice(2, 3, "Thanh Hoa", "Nghe An");
+        console.log(number3);
+
+        //Cong array
+        var arr1 = [1,2,3]
+        var arr2 = [4,5,6]
+        var arr3 = arr1.concat(arr2)
+        var arr4 = [...arr1,7,8,9, ...arr2]
+        console.log(arr3);
+        console.log(arr4);
+
+        //For loop (vong lap for)
+        for (var i = 0; i < arr4.length; i++){
+            console.log(arr4[i]);
+        }
+
+        //tinh tong
+        var sum = 0
+        for (var i = 0; i < arr4.length; i++){
+            sum = sum + arr4[i]
+        }
+        console.log(sum);
+
+        //tinh tong so le
+        var sum1 = 0
+        
+        for (var i = 0; i < arr4.length; i++){
+            if(arr4[i] % 2 != 0 && arr4[i] > 5){ //so trong mang le va phai lon hon 5
+                sum1 = sum1 + arr4[i]
+            }else{    
+                console.log(arr4[i])
+        } 
+        }
+        console.log(sum1);
+
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Biến</title>
+        <meta charset="utf-8"/>
+    </head>
+    
+    <body>
+        <script>
+            //string
+            var userName 
+            userName = "Nguyễn Văn A"
+            console.log(userName)
+            
+            //cong 2 string
+            var firstName = "Nguyễn"
+            var lastName = "A"
+            var fullName = firstName + " " + lastName
+            console.log(fullName)
+
+            //dem so ky tu kiem tra do dai cua chuoi
+            var lengthFullName = fullName.length
+            console.log(lengthFullName)
+
+            //method tren string
+            //1.concat dung de cong cac chuoi
+            var fullName1 = firstName.concat(" ", lastName)
+            console.log(fullName1);
+
+            //2. indexOf search vi tri chuoi con trong chuoi lon
+            var userName
+            userName = "Nguyễn Văn A"
+            var pos = userName.indexOf('Văn')
+            console.log(pos)
+
+            //lastIndexOf search vi tri chuoi con cuoi trong chuoi lon
+            var userName
+            userName = "Nguyễn Văn Văn A"
+            var pos = userName.lastIndexOf('Văn')
+            console.log(pos)    //danh cho dev de debug check loi code
+
+            //3. slice(cat chon vi tri bat dau, vi tri ket thuc cua chuoi)
+            var userName2
+            userName2 = "Nguyễn Văn Văn A"
+            var firstNameSlice = userName.slice(0,6)
+            console.log(firstNameSlice)
+
+            //4. substring (vị trí bắt đầu, vị trí kết thúc)
+            var userName1
+            userName1 = "Nguyễn Văn Văn A"
+            var subname = userName1.substring(0,6)
+            console.log(subname)
+
+            //5 substr (vị trí bắt đầu, vị trí kết thúc)
+            var userName3
+            userName3 = "Nguyễn Văn Văn A"
+            var subname = userName1.substr(2,8)
+            console.log(subname)
+
+            //replace (thay the chuoi) doc them W3school
+            //search (tim kiem chuoi) doc them w3school
+        </script>
+    </body>
+</html>

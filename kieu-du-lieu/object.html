@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Object</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <script>
+        //Object
+        //Khai bao
+
+        var userEmpty = {}
+        var user= {
+            name : "Nguyễn Văn A", 
+            age: 23,
+            email : "abc@gmail.com"
+        }
+
+        //console.log(user);
+
+        //var name  = user.name
+        var name= user["name"]
+        var age = user.age
+        var email = user.email
+
+        //console.log(name, age, email);
+
+        user.name = "Bui Thi B"
+        
+        //console.log(user);
+
+        //Thêm property
+        user.city = "Hà Nội"
+        
+
+        //Xoa property
+        delete user.city
+        //console.log(user);
+
+        //for .. in để duyệt các key của object
+        for (var pro in user){
+            console.log(user[pro]);
+        }
+
+        //for .. of, forEach (doc them): duyet qua cac phan tu cua mang
+
+    </script>
+</body>    

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Số (number)</title>
+        <meta charset="utf-8"/>
+    </head>
+    
+    <body>
+        <script>
+        //khai bao kieu number
+        //1. Kieu integer (So nguyen)
+        var integerNumber = 7 
+
+        //2. Kieu float (So thuc)
+        var floatNumber = 10.6
+        
+        console.log(integerNumber);
+        console.log(floatNumber);
+        
+        var num1 = 10
+        var num2 = 20
+        
+        console.log(typeof num1);
+
+        var result = num1 + num2
+        console.log(result);
+        
+        var result1 = num1 % num2
+        console.log(result1);
+
+        var result3 = num1 ** num2
+        console.log(result3)
+        console.log(typeof num1);
+
+        //Method
+        //Chuyen tu so sang chuoi
+        var num1Convert = num1.toString()
+        console.log(typeof num1Convert, num1Convert);
+
+        //Co 3 ham de lam tron 1 so:
+        //Math.ceil(num) (lam tron len)
+        //Vi du: 1.1 -> 2 1.9->2
+        //Math.floor(num) (lam tron xuong)
+        //Vi du: 1.1 -> 2 1.9->1
+        //Math.round(num) (lam tron theo quy tac)
+        //Vi du 1.5 -> 2, 1.1 -> 1
+        
+        var num3 = 5.4
+        console.log(Math.round(num3))
+
+        //3. Boolean (true/false)
+        var isLove = true
+        var isHate = false
+
+        console.log(!isLove); //phu dinh gia tri cho truoc
+        console.log(isHate);
+        
+        </script>
+    </body>
+</html>
