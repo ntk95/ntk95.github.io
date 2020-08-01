@@ -1,0 +1,87 @@
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+    font-size: 50px;
+}
+
+.content1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: center;
+    padding: 20px 20px 0px 0px;
+}
+
+.header {
+    padding: 20px 20px 20px 20px;
+    flex-direction: row;
+    display: flex;
+}
+
+.margin {
+    margin: 50px;
+}
+
+.bottom {
+    margin-bottom: 50px;
+}
+
+.menu {
+    background-color: blue;
+    float: left;
+    width: 250px;
+    padding: 10px;
+    height: 3000px;
+}
+
+.options1 {
+    padding: 100px 0px 100px 0px;
+    font-size: 30px;
+}
+
+.options {
+    padding: 100px 0px 100px 0px;
+    font-size: 30px;
+}
+
+a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+a1 {
+    color: black;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+.footer {
+    background-color: red;
+    color: white;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+    height: 211px;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 20px;
+}
+
+.info {
+    margin: 0px 100px 0px 100px;
+    background-color: rgb(63, 63, 63);
+    text-decoration: underline;
+}
+
+.image:hover {
+    position: absolute;
+    transform: scale(1.25);
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
