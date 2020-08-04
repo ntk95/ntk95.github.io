@@ -1,0 +1,421 @@
+.anticovid {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.superman {
+    position: absolute;
+    top: 300px;
+    left: 650px;
+    animation: superman-beat 1s infinite;
+}
+
+@keyframes superman-beat {
+    10% {
+        transform: scale(0.5);
+    }
+    30% {
+        transform: scale(0.6);
+    }
+    50% {
+        transform: scale(0.7);
+    }
+    70% {
+        transform: scale(0.8);
+    }
+    90% {
+        transform: scale(0.9);
+    }
+}
+
+.saovang {
+    position: absolute;
+    top: -10px;
+    left: 670px;
+    animation: saovang-beat 1s infinite;
+}
+
+@keyframes saovang-beat {
+    10% {
+        transform: scale(0.4);
+    }
+    30% {
+        transform: scale(0.5);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    70% {
+        transform: scale(0.7);
+    }
+    90% {
+        transform: scale(0.8);
+    }
+}
+
+.bacsi {
+    position: absolute;
+    top: 400px;
+    left: 500px;
+    animation: bacsi-beat 3s infinite;
+}
+
+@keyframes bacsi-beat {
+    10% {
+        transform: scale(0.1);
+    }
+    30% {
+        transform: scale(0.2);
+    }
+    50% {
+        transform: scale(0.3);
+    }
+    70% {
+        transform: scale(0.4);
+    }
+    90% {
+        transform: scale(0.5);
+    }
+}
+
+.chuthapdo {
+    position: absolute;
+    top: 300px;
+    left: 850px;
+    animation: chuthapdo-beat 3s infinite;
+}
+
+@keyframes chuthapdo-beat {
+    10% {
+        transform: scale(0.2);
+    }
+    30% {
+        transform: scale(0.4);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    70% {
+        transform: scale(0.8);
+    }
+    90% {
+        transform: scale(1);
+    }
+}
+
+.vietnam {
+    position: absolute;
+    top: 150px;
+    left: 610px;
+    color: red;
+    font-size: 50px;
+    transition: 0.3s;
+    animation: vietnam-beat 3s infinite;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+@keyframes vietnam-beat {
+    10% {
+        color: yellow;
+    }
+    30% {
+        color: red;
+    }
+    50% {
+        color: yellow;
+    }
+    70% {
+        color: red;
+    }
+    90% {
+        color: yellow;
+    }
+}
+
+.vodich {
+    position: absolute;
+    top: 150px;
+    left: 1050px;
+    color: yellow;
+    font-size: 50px;
+    animation: vodich-beat 3s infinite;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+@keyframes vodich-beat {
+    10% {
+        color: red;
+    }
+    30% {
+        color: yellow;
+    }
+    50% {
+        color: red;
+    }
+    70% {
+        color: yellow;
+    }
+    90% {
+        color: red;
+    }
+}
+
+.chuthapdo {
+    position: absolute;
+    top: 300px;
+    left: 850px;
+    animation: chuthapdo-beat 3s infinite;
+}
+
+@keyframes chuthapdo-beat {
+    10% {
+        transform: scale(0.2);
+    }
+    30% {
+        transform: scale(0.4);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    70% {
+        transform: scale(0.8);
+    }
+    90% {
+        transform: scale(1);
+    }
+}
+
+.cam {
+    position: absolute;
+    top: 0px;
+    left: 1000px;
+    animation: cam-beat 3s infinite;
+}
+
+@keyframes cam-beat {
+    10% {
+        transform: scale(0.2);
+    }
+    30% {
+        transform: scale(0.4);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    70% {
+        transform: scale(0.8);
+    }
+    90% {
+        transform: scale(1);
+    }
+}
+
+.corona {
+    position: absolute;
+    top: 80px;
+    left: 1070px;
+}
+
+.content4 {
+    top: 0px;
+    left: 20px;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jump {
+    color: white;
+}
+
+.jump::after {
+    animation: jumping 2s ease infinite;
+    content: "";
+}
+
+@keyframes jumping {
+    0% {
+        background-color: green;
+        content: "ĐEO KHẨU TRANG";
+    }
+    40% {
+        background-color: purple;
+        content: "RỬA TAY SẠCH";
+    }
+    70% {
+        background-color: orangered;
+        content: "ĐEO KHẨU TRANG";
+    }
+    100% {
+        background-color: green;
+        content: "RỬA TAY SẠCH";
+    }
+}
+
+.khautrang {
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    animation: khautrang-beat 3s infinite;
+}
+
+@keyframes khautrang-beat {
+    10% {
+        transform: scale(0.2);
+    }
+    30% {
+        transform: scale(0.4);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    70% {
+        transform: scale(0.8);
+    }
+    90% {
+        transform: scale(1);
+    }
+}
+
+.ruatay {
+    position: absolute;
+    top: 450px;
+    left: 30px;
+    animation: ruatay-beat 3s infinite;
+}
+
+@keyframes ruatay-beat {
+    10% {
+        transform: scale(0.2);
+    }
+    30% {
+        transform: scale(0.4);
+    }
+    50% {
+        transform: scale(0.6);
+    }
+    70% {
+        transform: scale(0.8);
+    }
+    90% {
+        transform: scale(1);
+    }
+}
+
+.content5 {
+    top: 0px;
+    left: 1300px;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jump1 {
+    color: white;
+}
+
+.jump1::after {
+    animation: jumping1 2s ease infinite;
+    content: "";
+}
+
+@keyframes jumping1 {
+    0% {
+        background-color: green;
+        content: "TẬP TRUNG";
+    }
+    40% {
+        background-color: purple;
+        content: "TỤ TẬP";
+    }
+    70% {
+        background-color: orangered;
+        content: "TẬP TRUNG";
+    }
+    100% {
+        background-color: green;
+        content: "TỤ TẬP";
+    }
+}
+
+.tutap {
+    position: absolute;
+    top: 190px;
+    left: 1300px;
+}
+
+.cam1 {
+    position: absolute;
+    top: 220px;
+    left: 1350px;
+    animation: cam1-beat 3s infinite;
+}
+
+@keyframes cam1-beat {
+    10% {
+        transform: scale(0.2);
+    }
+    30% {
+        transform: scale(0.6);
+    }
+    50% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.4);
+    }
+    90% {
+        transform: scale(1.8);
+    }
+}
+
+.giancach {
+    position: absolute;
+    top: 600px;
+    left: 1500px;
+    animation: giancach-beat 3s infinite;
+}
+
+@keyframes giancach-beat {
+    10% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    70% {
+        transform: scale(1.6);
+    }
+    90% {
+        transform: scale(1.8);
+    }
+}
+
+.strongarm {
+    position: absolute;
+    top: 0px;
+    left: 600px;
+    animation: strongarm-beat 3s infinite;
+}
+
+@keyframes strongarm-beat {
+    10% {
+        transform: scale(0.2);
+    }
+    30% {
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(0.4);
+    }
+    70% {
+        transform: scale(0.5);
+    }
+    90% {
+        transform: scale(0.6);
+    }
+}
