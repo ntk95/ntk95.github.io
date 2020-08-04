@@ -1,0 +1,94 @@
+.btn {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition: 0.3s;
+    width: 200px;
+    height: 100px;
+}
+
+.btn:hover {
+    background-color: blue;
+    color: white;
+    border-radius: 50px;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0px 0px 0px 0px;
+}
+
+.mrg {
+    margin: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+.image:hover {
+    position: absolute;
+    transform: scale(1.25);
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.heart {
+    margin: 200px;
+    animation: heart-beat 1s infinite;
+}
+
+@keyframes heart-beat {
+    10% {
+        transform: scale(2);
+    }
+    30% {
+        transform: scale(3);
+    }
+    50% {
+        transform: scale(4);
+    }
+    70% {
+        transform: scale(5);
+    }
+    90% {
+        transform: scale(6);
+    }
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jump {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.jump::after {
+    animation: jumping 2s ease infinite;
+    content: "";
+}
+
+@keyframes jumping {
+    0% {
+        background-color: green;
+        content: "TEACHING";
+    }
+    40% {
+        background-color: purple;
+        content: "LEARNING";
+    }
+    70% {
+        background-color: orangered;
+        content: "CODING";
+    }
+    100% {
+        background-color: green;
+        content: "TEACHING";
+    }
+}
