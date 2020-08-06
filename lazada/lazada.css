@@ -1,0 +1,220 @@
+.lazada {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    line-height: 1;
+}
+
+.lazada ul,
+.lazada ul li,
+.lazada ul ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.lazada ul {
+    position: relative;
+    z-index: 500;
+    float: left;
+}
+
+.lazada ul li {
+    float: left;
+    min-height: 0.05em;
+    line-height: 1em;
+    vertical-align: middle;
+    position: relative;
+}
+
+.lazada ul li.hover,
+.lazada ul li:hover {
+    position: relative;
+    z-index: 510;
+    cursor: default;
+}
+
+.lazada ul ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    z-index: 520;
+    width: 100%;
+}
+
+.lazada ul ul li {
+    float: none;
+}
+
+.lazada ul ul ul {
+    top: 0;
+    right: 0;
+}
+
+.lazada ul li:hover>ul {
+    visibility: visible;
+}
+
+.lazada ul ul {
+    top: 0;
+    left: 99%;
+}
+
+.lazada ul li {
+    float: none;
+}
+
+.lazada ul ul {
+    margin-top: 0.05em;
+}
+
+.lazada {
+    width: 13em;
+    background: violet;
+    font-family: 'roboto', Tahoma, Arial, sans-serif;
+    zoom: 1;
+}
+
+.lazada:before {
+    content: '';
+    display: block;
+}
+
+.lazada:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.lazada a {
+    display: block;
+    padding: 1em 1.3em;
+    color: black;
+    text-decoration: none;
+}
+
+.lazada>ul {
+    width: 13em;
+}
+
+.lazada ul ul {
+    width: 13em;
+}
+
+.lazada>ul>li>a {
+    border-right: 0.3em solid black;
+    border-left: black;
+    color: black;
+}
+
+.lazada>ul>li>a:hover {
+    color: black;
+}
+
+.lazada>ul>li a:hover,
+.lazada>ul>li:hover a {
+    background: white;
+}
+
+.lazada li {
+    position: relative;
+}
+
+.lazada ul li.has-sub>a:after {
+    content: '»';
+    position: absolute;
+    right: 1em;
+}
+
+.lazada ul ul li.first {
+    -webkit-border-radius: 0 3px 0 0;
+    -moz-border-radius: 0 3px 0 0;
+    border-radius: 0 3px 0 0;
+}
+
+.lazadan ul ul li.last {
+    -webkit-border-radius: 0 0 3px 0;
+    -moz-border-radius: 0 0 3px 0;
+    border-radius: 0 0 3px 0;
+    border-bottom: 0;
+}
+
+.lazada ul ul {
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.lazada ul ul {
+    border: 1px solid black;
+}
+
+.lazada ul ul a {
+    color: black;
+}
+
+.lazada ul ul a:hover {
+    color: black;
+}
+
+.lazada ul ul li {
+    border-bottom: 1px solid gold;
+}
+
+.lazada ul ul li:hover>a {
+    background: violet;
+    color: black;
+}
+
+.lazada.align-right>ul>li>a {
+    border-left: 0.3em solid black;
+    border-right: black;
+}
+
+.lazada.align-right {
+    float: right;
+}
+
+.lazada.align-right li {
+    text-align: right;
+}
+
+.lazada.align-right ul li.has-sub>a:before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    margin-top: -6px;
+}
+
+.lazada.align-right ul li.has-sub>a:after {
+    content: none;
+}
+
+.lazada.align-right ul ul {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    z-index: 598;
+    width: 100%;
+}
+
+.lazada.align-right ul ul li.first {
+    -webkit-border-radius: 3px 0 0 0;
+    -moz-border-radius: 3px 0 0 0;
+    border-radius: 3px 0 0 0;
+}
+
+.lazada.align-right ul ul li.last {
+    -webkit-border-radius: 0 0 0 3px;
+    -moz-border-radius: 0 0 0 3px;
+    border-radius: 0 0 0 3px;
+}
+
+.lazada.align-right ul ul {
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
