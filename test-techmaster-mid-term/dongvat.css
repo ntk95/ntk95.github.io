@@ -1,0 +1,35 @@
+.flex{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+
+.margin{
+    margin: 80px;
+}
+
+#detail{
+    display: flex;
+    flex-direction: row;
+}
+
+#gia{
+    color: red;
+}
+#specs{
+    width : 100%;
+}
+
+.anh{
+
+}
+
+.anh:hover {
+    position: absolute;
+    transform: scale(1.25);
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.5;
+}
