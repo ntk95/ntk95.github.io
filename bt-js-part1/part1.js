@@ -15,7 +15,6 @@ console.log(bai2);
 var str3 = "chÀo MừnG đẾn với techMaster";
 function capitalizeString(str3) {
     var str3Result;
-    console.log("Current String: " + str);
     str3 = str3.toLocaleLowerCase();
     // tách chuỗi
     var arrStr3 = str3.split(" ");
