@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Tạo tài khoản mới</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="register.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="border_login">
+        <div class="content">
+            <div class="Register_content">
+                <div class="Register">
+                    <p class="Reg_Bold">Đăng ký</p>
+                    <p class="Reg_Slogan">Nhanh chóng và dễ dàng.</p>
+                    <hr class="hr">
+                </div>
+            </div>
+            <div class="">
+                <form action="result.html" method="post">
+                    <div><input type="text" class="LastName" name="LastName" placeholder="Họ" required="required">
+                        <input type="text" class="FirstName" name="FirstName" placeholder="Tên" required="required">
+                    </div>
+                    <div><input type="text" class="PhoneEmail" name="PhoneEmail" placeholder="Số điện thoại hoặc email" required="required"></div>
+                    <div><input type="text" class="NewPass" name="NewPass" placeholder="Mật khẩu mới" required="required"></div>
+                    <div class="smalltext1">
+                        <p>Ngày sinh <i class="fa fa-question-circle"></i>
+                        </p>
+                    </div>
+
+                    <select id="day" name="day" class="day">
+                            <option value="ngay">Ngày</option>
+                            <option value="ngay1">1</option>
+                            <option value="ngay2">2</option>
+                            <option value="ngay3">3</option>
+                            <option value="ngay4">4</option>
+                            <option value="ngay5">5</option>
+                            <option value="ngay6">6</option>
+                            <option value="ngay7">7</option>
+                            <option value="ngay8">8</option>
+                            <option value="ngay9">9</option>
+                            <option value="ngay10">10</option>
+                            <option value="ngay11">11</option>
+                            <option value="ngay12">12</option>
+                            <option value="ngay13">13</option>
+                            <option value="ngay14">14</option>
+                            <option value="ngay15">15</option>
+                            <option value="ngay16">16</option>
+                            <option value="ngay17">17</option>
+                            <option value="ngay18">18</option>
+                            <option value="ngay19">19</option>
+                            <option value="ngay20">20</option>
+                            <option value="ngay21">21</option>
+                            <option value="ngay22">22</option>
+                            <option value="ngay23">23</option>
+                            <option value="ngay24">24</option>
+                            <option value="ngay25">25</option>
+                            <option value="ngay26">26</option>
+                            <option value="ngay27">27</option>
+                            <option value="ngay28">28</option>
+                            <option value="ngay29">29</option>
+                            <option value="ngay30">30</option>
+                            <option value="ngay31">31</option>
+                        </select>
+                    <select id="month" name="month" class="month">
+                    <option value="thang">Tháng</option>
+                    <option value="thang1">Tháng 1</option>
+                    <option value="thang2">Tháng 2</option>
+                    <option value="thang3">Tháng 3</option>
+                    <option value="thang4">Tháng 4</option>
+                    <option value="thang5">Tháng 5</option>
+                    <option value="thang6">Tháng 6</option>
+                    <option value="thang7">Tháng 7</option>
+                    <option value="thang8">Tháng 8</option>
+                    <option value="thang9">Tháng 9</option>
+                    <option value="thang10">Tháng 10</option>
+                    <option value="thang11">Tháng 11</option>
+                    <option value="thang12">Tháng 12</option>
+                </select>
+                    <select id="year" name="year" class="year">
+                    <option value="nam">Năm</option>
+                    <option value="nam2020">2020</option>
+                    <option value="nam2019">2019</option>
+                    <option value="nam2018">2018</option>
+                    <option value="nam2017">2017</option>
+                    <option value="nam2016">2016</option>
+                    <option value="nam2015">2015</option>
+                    <option value="nam2014">2014</option>
+                    <option value="nam2013">2013</option>
+                    <option value="nam2012">2012</option>
+                    <option value="nam2011">2011</option>
+                    <option value="nam2010">2010</option>
+                    <option value="nam2009">2009</option>
+                    <option value="nam2008">2008</option>
+                    <option value="nam2007">2007</option>
+                    <option value="nam2006">2006</option>
+                    <option value="nam2005">2005</option>
+                    <option value="nam2004">2004</option>
+                    <option value="nam2003">2003</option>
+                    <option value="nam2002">2002</option>
+                    <option value="nam2001">2001</option>
+                    <option value="nam2000">2000</option>
+                    <option value="nam1999">1999</option>
+                    <option value="nam1998">1998</option>
+                    <option value="nam1997">1997</option>
+                    <option value="nam1996">1996</option>
+                    <option value="nam1995">1995</option>
+                    <option value="nam1994">1994</option>
+                    <option value="nam1993">1993</option>
+                    <option value="nam1992">1992</option>
+                    <option value="nam1991">1991</option>
+                    <option value="nam1990">1990</option>
+                </select>
+
+                    <div class="smalltext2">
+                        <p>Giới tính <i class="fa fa-question-circle"></i>
+                        </p>
+                    </div>
+                    <div class="border radiobutton">
+                        <div class="border1"><label class="fix">Nữ</label><input type="radio" id="radio1" name="radio" value="female" class="fix" checked></div>
+                        <div class="border2"><label class="fix">Nam</label><input type="radio" id="radio2" name="radio" value="male" class="fix" checked></div>
+                        <div class="border3"><label class="fix">Tùy chỉnh</label><input type="radio" id="radio3" name="radio" value="options" class="fix" checked></div>
+                    </div>
+                    </select>
+                    <p class="smalltext3">Bằng cách nhấp vào Đăng ký, bạn đồng ý với
+                        <a href="#" class="link">Điều khoản</a>,
+                        <a href="#" class="link">Chính sách dữ liệu</a> và
+                        <a href="#" class="link">Chính sách cookie</a> <br/>của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ lúc nào.</p>
+                    <a href="./result.html"><input type="button" id="creat" value="Đăng ký">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
