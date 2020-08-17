@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table,
+th,
+td {
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+tr:hover {
+    background-color: gold;
+}
+
+.width0 {
+    width: 50px;
+    text-align: center;
+}
+
+.width {
+    width: 450px;
+    text-align: center;
+}
+
+.width1 {
+    width: 250px;
+    text-align: center;
+}
+
+.width2 {
+    width: 150px;
+    text-align: center;
+}
+
+.width3 {
+    width: 100px;
+    text-align: center;
+}
+
+.width4 {
+    width: 80px;
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bigfontsize {
+    font-size: 50px;
+}
+
+.background0 {
+    background-color: pink;
+}
+
+.background1 {
+    background-color: orange;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
