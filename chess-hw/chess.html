@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="600" height="600" style="background-color:#E9EBEC"></canvas>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const ctx = canvas.getContext("2d")
+        canvas.style.border = '1px solid black'
+        ctx.fillStyle = "black"
+        function fillCell(x, y) {
+            ctx.beginPath()
+            ctx.rect(x, y, canvas.width / 8, canvas.height / 8)
+            ctx.fill()
+        }
+        let y = 0
+        for (let i = 0; i < 8; i++) {
+            let x = 0
+            for (let j = 0; j < 4; j++) {  
+                if (i % 2 == 0) {
+                    fillCell(x, y)
+                    x += canvas.width / 4
+                }
+                else {
+                    fillCell(x + canvas.width/8, y)
+                    x += canvas.width / 4
+                }
+            }
+            y += canvas.width / 8
+        }
+
+    </script>
+</body>
+
+</html>
