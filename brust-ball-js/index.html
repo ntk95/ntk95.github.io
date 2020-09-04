@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ball</title>
+    <style>
+        body {
+            cursor: crosshair;
+            /*con trỏ chuột là crosshair phù hợp với phong cách game bắn súng */
+        }
+        
+        #canvas {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="canvas"></canvas>
+    <script>
+        const canvas = document.getElementById("canvas");
+        const c = canvas.getContext('2d');
+        canvas.width = innerWidth * 0.9;
+        canvas.height = innerHeight * 0.9;
+        var count = 0;
+        var level = 1;
+
+
+        canvas.width = innerWidth * 0.9;
+        canvas.height = innerHeight * 0.9;
+        canvas.style.border = '15px solid red'
+
+
+        class Ball {
+            constructor(radius, color, x, y) {
+                this.radius = radius;
+                this.color = color;
+                this.x = x;
+                this.y = y;
+            }
+
+            draw() {
+                c.beginPath();
+                c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+                c.fillStyle = this.color;
+                c.fill();
+                c.closePath();
+            }
+            move() {
+                this.y -= 2; //Tốc độ chuyển động từ dưới lên trên
+                if (this.y - this.radius <= 0) {
+                    //nếu vượt quá cạnh trên màn hình thì quay lại từ cạnh dưới
+                    this.y = canvas.height - this.radius;
+                    //đặt vị trí ngẫu nhiên cho bóng
+                    this.x = randomIntFromRange(0, canvas.width);
+                }
+                this.draw();
+            }
+        }
+        let radius = 20;
+        balls = []; //mảng lưu trữ tạm của bóng
+
+        addEventListener('click', (event) => { //click để thêm bóng
+            var x = randomIntFromRange(0, canvas.width);
+            let ball = new Ball(radius, rgb(), x, canvas.height);
+            balls.push(ball)
+        });
+
+        function animate() { //hoạt hình di chuyển bóng
+            requestAnimationFrame(animate);
+            c.clearRect(0, 0, canvas.width, canvas.height); //xóa bóng khi đã chạm cạnh
+            if (balls != "") {
+                balls.forEach(ball => ball.move());
+            }
+
+        }
+        addEventListener("click", (event) => { //click đập nổ bóng
+            console.log(`${event.offsetX}, ${event.offsetY}`);
+            let n = balls.length;
+            while (n--) {
+                let ball = balls[n];
+                if (Math.pow((event.offsetX - ball.x), 2) +
+                    Math.pow((event.offsetY - ball.y), 2) < Math.pow(ball.radius, 2)) {
+                    balls.splice(n, 1);
+                    let x = document.getElementById("ball_hit");
+                    x.play();
+                }
+            }
+        });
+
+        animate();
+
+        function rgb() { //random màu sắc ngẫu nhiên cho bóng mới
+            color = 'rgb(';
+            for (var i = 0; i < 3; i++) {
+                color += Math.floor(Math.random() * 255) + ',';
+            }
+            return color.replace(/\,$/, ')');
+        }
+
+        function randomIntFromRange(min, max) { //random ngẫu nhiên vị trí cho bóng mới
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+    </script>
+</body>
+
+</html>
