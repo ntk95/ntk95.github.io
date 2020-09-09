@@ -3,15 +3,229 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="brick.css">
-    <title>2D Brick Breaker</title>
+    <title>Brick breaker</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        canvas {
+            background-color: black;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
-    <canvas id="canvas" width="1000" height="800"></canvas>
-    <script src="brick.js"></script>
+
+    <canvas id="canvas" width="1000" height="900"></canvas>
+
+    <script>
+        //Tạo các biến để tham chiếu và lưu trữ canvas
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        canvas.style.border = '15px solid red'
+        var ballRadius = 10;
+
+        var x = canvas.width / 2;
+        var y = canvas.height - 30;
+
+        var dx = 2;
+        var dy = -2;
+
+        //tạo đệm, chỉ định điểm bắt đầu của đệm
+        var paddleHeight = 10;
+        var paddleWidth = 75;
+        var paddleX = (canvas.width - paddleWidth) / 2;
+
+        //tạo các biến cho mũi tên phải và trái trên bàn phím
+        var rightPressed = false;
+        var leftPressed = false;
+
+        //tạo các biến cho các khối gạch
+        var brickRowCount = 7;
+        var brickColumnCount = 11;
+        var brickWidth = 75;
+        var brickHeight = 20;
+        var brickPadding = 10;
+        var brickOffsetTop = 30;
+        var brickOffsetLeft = 30;
+
+        //Tạo mảng cho các viên gạch
+        var bricks = [];
+        for (var c = 0; c < brickColumnCount; c++) {
+            bricks[c] = [];
+            for (var r = 0; r < brickRowCount; r++) {
+                bricks[c][r] = {
+                    x: 0,
+                    y: 0,
+                    status: 1
+                };
+            }
+        }
+        //Tạo biến để ghi điểm, đếm gạch bị đập, số mạng sống của đệm
+        var score = 0;
+        var bricksHit = 0;
+        var bricksHitPerLive = 0;
+        var lives = 3;
+
+        //vẽ bóng
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+            ctx.fillStyle = 'gold'
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        //vẽ đệm
+        function drawPaddle() {
+            ctx.beginPath();
+            ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+            ctx.fillStyle = "blue";
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        //vẽ số lượng gạch đông đảo
+        function drawBricks() {
+            for (var c = 0; c < brickColumnCount; c++) {
+                for (var r = 0; r < brickRowCount; r++) {
+                    if (bricks[c][r].status == 1) {
+                        var brickX = (c * (brickWidth + brickPadding)) + brickOffsetLeft;
+                        var brickY = (r * (brickHeight + brickPadding)) + brickOffsetTop;
+                        bricks[c][r].x = brickX;
+                        bricks[c][r].y = brickY;
+                        ctx.beginPath();
+                        ctx.rect(brickX, brickY, brickWidth, brickHeight);
+                        ctx.fillStyle = "#dd8c11";
+                        ctx.fill();
+                        ctx.closePath();
+                    }
+                }
+            }
+        }
+        //vẽ bảng điểm
+        function drawScore() {
+            ctx.font = "16px Arial";
+            ctx.fillStyle = "pink";
+            ctx.fillText("Điểm: " + score, 8, 20)
+        }
+        //vẽ bảng mạng sống
+        function drawLives() {
+            ctx.font = "16px Arial";
+            ctx.fillStyle = "violet";
+            ctx.fillText("Mạng: " + lives, canvas.width - 65, 20)
+        }
+        //vẽ
+        function draw() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            drawBricks();
+            drawPaddle();
+            drawBall();
+            drawScore();
+            drawLives();
+            collisionDetection();
+            //các tình huống chạm tường và chạm gạch
+            if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) { //chạm tường trái/phải
+                dx = -dx; // bóng nảy sang trái
+            }
+            if (y + dy < ballRadius + ballRadius) { //chạm tường trên
+                dy = -dy; //bóng nảy xuống dưới
+            } else if (y + dy > canvas.height - ballRadius) {
+                if (x > paddleX && x < paddleX + paddleWidth && y + dy > canvas.height - paddleHeight * 2) { //khi chạm vào đệm
+                    dy = -dy - 0.2; // bóng nảy lên trên
+                } else { //khi bị rớt xuống tường dưới
+                    lives--;
+                    bricksHitPerLive = 0;
+                    if (!lives) {
+                        alert("Bạn đã mất quá nhiều mạng, trò chơi đã kết thúc");
+                        document.location.reload();
+                    } else { //vẽ lại bóng và đệm, giữ nguyên gạch
+                        x = canvas.width / 2;
+                        y = canvas.height - 30;
+                        dx = 2;
+                        dy = -2;
+                        paddleX = (canvas.width - paddleWidth) / 2;
+                    }
+                }
+            }
+            x += dx;
+            y += dy;
+
+            if (rightPressed) {
+                paddleX += 5;
+                if (paddleX + paddleWidth > canvas.width) {
+                    paddleX = canvas.width - paddleWidth;
+                }
+            } else if (leftPressed) {
+                paddleX -= 5;
+                if (paddleX < 0) {
+                    paddleX = 0;
+                }
+            }
+            requestAnimationFrame(draw);
+        }
+
+        //điều khiển bằng bàn phím & chuột
+        document.addEventListener("keydown", keyDownHandler, false);
+        document.addEventListener("keyup", keyUpHandler, false);
+        document.addEventListener("mousemove", mouseMoveHandler, false)
+
+        //điều khiển bằng bàn phím
+        function keyDownHandler(e) {
+            if (e.key == "Right" || e.key == "ArrowRight") {
+                rightPressed = true;
+            } else if (e.key == "Left" || e.key == "ArrowLeft") {
+                leftPressed = true;
+            }
+        }
+
+        function keyUpHandler(e) {
+
+            if (e.key == "Right" || e.key == "ArrowRight") {
+                rightPressed = false;
+            } else if (e.key == "Left" || e.key == "ArrowLeft") {
+                leftPressed = false;
+            }
+        }
+        //điều khiển bằng chuột
+        function mouseMoveHandler(e) {
+            var relativeX = e.clientX - canvas.offsetLeft;
+            if (relativeX > 0 && relativeX < canvas.width) {
+                paddleX = relativeX - paddleWidth / 2;
+            }
+        }
+
+        draw();
+
+        //báo thắng cuộc
+        function collisionDetection() {
+            for (var c = 0; c < brickColumnCount; c++) {
+                for (var r = 0; r < brickRowCount; r++) {
+                    var b = bricks[c][r];
+                    if (b.status == 1) {
+                        if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+                            dy = -dy;
+                            b.status = 0;
+                            bricksHit++;
+                            bricksHitPerLive++;
+                            score += bricksHitPerLive; //điểm tăng dần khi nhiều bóng chạm mỗi mạng sống
+                            if (bricksHit == brickRowCount * brickColumnCount) {
+                                alert("Chúc mừng bạn đã chiến thắng!\nBạn đã ghi " + score + " điểm!.");
+                                document.location.reload();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </body>
+
+</html>
 
 </html>
