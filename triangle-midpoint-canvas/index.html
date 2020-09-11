@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tam giác và trung tuyến</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canvas");
+        const c = canvas.getContext('2d');
+        canvas.width = innerWidth * 0.9;
+        canvas.height = innerHeight * 0.9;
+        canvas.style.border = '15px solid blue'
+        const ctx = canvas.getContext('2d');
+
+
+        class Point {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+        }
+
+        class Triangle {
+            constructor(a, b, c) {
+                this.a = a;
+                this.b = b;
+                this.c = c;
+                this.ab = {
+                    x: (a.x + b.x) / 2,
+                    y: (a.y + b.y) / 2
+                };
+                this.bc = {
+                    x: (b.x + c.x) / 2,
+                    y: (b.y + c.y) / 2
+                };
+                this.ac = {
+                    x: (c.x + a.x) / 2,
+                    y: (c.y + a.y) / 2
+                };
+            }
+
+            drawTriangle() {
+                ctx.beginPath();
+                ctx.moveTo(this.a.x, this.a.y);
+                ctx.lineTo(this.b.x, this.b.y);
+                ctx.lineTo(this.c.x, this.c.y);
+                ctx.lineTo(this.a.x, this.a.y);
+                ctx.lineWidth = 10;
+                ctx.strokeStyle = 'red';
+                ctx.lineCap = 'square';
+                ctx.stroke();
+            }
+
+            drawMidPoint() {
+                ctx.beginPath();
+                ctx.moveTo(this.a.x, this.a.y);
+                ctx.lineTo(this.bc.x, this.bc.y);
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = 'green';
+                ctx.setLineDash([5, 5, 5]);
+                ctx.lineCap = 'square';
+                ctx.stroke();
+
+
+                ctx.beginPath();
+                ctx.moveTo(this.b.x, this.b.y);
+                ctx.lineTo(this.ac.x, this.ac.y);
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = 'blue';
+                ctx.setLineDash([5, 5, 5]);
+                ctx.lineCap = 'square';
+                ctx.stroke();
+
+
+                ctx.beginPath();
+                ctx.moveTo(this.c.x, this.c.y);
+                ctx.lineTo(this.ab.x, this.ab.y);
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = 'pink';
+                ctx.setLineDash([5, 5, 5]);
+                ctx.lineCap = 'square';
+                ctx.stroke();
+
+            }
+        }
+
+
+        let pointA = new Point(500, 100);
+        let pointB = new Point(300, 500);
+        let pointC = new Point(700, 500);
+        let triangle = new Triangle(pointA, pointB, pointC);
+        triangle.drawTriangle();
+        triangle.drawMidPoint();
+    </script>
+</body>
