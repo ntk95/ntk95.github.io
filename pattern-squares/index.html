@@ -1,82 +1,104 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tam giác và trung tuyến</title>
     <style>
-        #canvas {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
+
     </style>
 </head>
-<html>
 
 <body>
-    <div class="btn">
-        <input type="number" id="input-number" placeholder="Nhập số hình vuông">
-        <button id="btn_draw_square">Vẽ số hình vuông</button>
-    </div>
     <canvas id="canvas"></canvas>
+
     <script>
-        const btn_draw_square = document.getElementById('btn_draw_square')
-        const canvas = document.getElementById('canvas');
-        let c = canvas.getContext('2d');
+        const canvas = document.getElementById("canvas");
+        const c = canvas.getContext('2d');
         canvas.width = innerWidth * 0.9;
         canvas.height = innerHeight * 0.9;
-        canvas.style.border = '2px solid #000'
-        addEventListener("resize", () => {
-            canvas.width = innerWidth * 0.9;
-            canvas.height = innerHeight * 0.9;
-        });
-        btn_draw_square.addEventListener('click', drawSquare)
+        canvas.style.border = '15px solid blue'
+        const ctx = canvas.getContext('2d');
 
-        class Square {
-            constructor(centerx, centery, width, color, rotate) {
-                this.centerx = centerx;
-                this.centery = centery;
-                this.rect_width = width;
-                this.color = color;
-                this.rotate = rotate
-            }
-            draw() {
-                let rect_width = 200;
-                c.fillStyle = this.color;
 
-                if (!this.rotate) {
-                    c.fillRect(this.centerx - this.rect_width / 2, this.centery - this.rect_width / 2,
-                        this.rect_width, this.rect_width);
-                } else {
-                    c.save();
-                    c.translate(this.centerx, this.centery);
-                    c.rotate(Math.PI / 4);
-                    c.fillRect(-this.rect_width / 2, -this.rect_width / 2, this.rect_width, this.rect_width);
-                    c.restore();
-                }
+        class Point {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
             }
         }
-        let centerx = canvas.width / 2;
-        let centery = canvas.height / 2;
-        let square = []
 
-        function drawSquare() {
-            const input_number = document.getElementById("input-number")
-            let value = input_number.value
-            for (let i = 0; i <= value; i++) {
-                if (i % 2 == 1) {
-                    square[i] = new Square(centerx, centery, 400 / (1.414 ** i), 'white', true);
-                } else {
-                    square[i] = new Square(centerx, centery, 400 / (1.414 ** i), '#4472C4', false)
-                }
-                square.forEach(ele => ele.draw())
+        class Triangle {
+            constructor(a, b, c) {
+                this.a = a;
+                this.b = b;
+                this.c = c;
+                this.ab = {
+                    x: (a.x + b.x) / 2,
+                    y: (a.y + b.y) / 2
+                };
+                this.bc = {
+                    x: (b.x + c.x) / 2,
+                    y: (b.y + c.y) / 2
+                };
+                this.ac = {
+                    x: (c.x + a.x) / 2,
+                    y: (c.y + a.y) / 2
+                };
+            }
+
+            drawTriangle() {
+                ctx.beginPath();
+                ctx.moveTo(this.a.x, this.a.y);
+                ctx.lineTo(this.b.x, this.b.y);
+                ctx.lineTo(this.c.x, this.c.y);
+                ctx.lineTo(this.a.x, this.a.y);
+                ctx.lineWidth = 10;
+                ctx.strokeStyle = 'red';
+                ctx.lineCap = 'square';
+                ctx.stroke();
+            }
+
+            drawMidPoint() {
+                ctx.beginPath();
+                ctx.moveTo(this.a.x, this.a.y);
+                ctx.lineTo(this.bc.x, this.bc.y);
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = 'green';
+                ctx.setLineDash([5, 5, 5]);
+                ctx.lineCap = 'square';
+                ctx.stroke();
+
+
+                ctx.beginPath();
+                ctx.moveTo(this.b.x, this.b.y);
+                ctx.lineTo(this.ac.x, this.ac.y);
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = 'blue';
+                ctx.setLineDash([5, 5, 5]);
+                ctx.lineCap = 'square';
+                ctx.stroke();
+
+
+                ctx.beginPath();
+                ctx.moveTo(this.c.x, this.c.y);
+                ctx.lineTo(this.ab.x, this.ab.y);
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = 'pink';
+                ctx.setLineDash([5, 5, 5]);
+                ctx.lineCap = 'square';
+                ctx.stroke();
+
             }
         }
+
+
+        let pointA = new Point(500, 100);
+        let pointB = new Point(300, 500);
+        let pointC = new Point(700, 500);
+        let triangle = new Triangle(pointA, pointB, pointC);
+        triangle.drawTriangle();
+        triangle.drawMidPoint();
     </script>
 </body>
-
-</html>
