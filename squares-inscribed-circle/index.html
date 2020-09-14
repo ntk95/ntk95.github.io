@@ -1,0 +1,93 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+</head>
+<html>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <script>
+        let canvas = document.getElementById("canvas");
+        let c = canvas.getContext('2d');
+
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
+
+        addEventListener("resize", () => {
+            canvas.width = innerWidth;
+            canvas.height = innerHeight;
+        });
+
+        class Square {
+            constructor(centerx, centery, width, color) {
+                this.centerx = centerx;
+                this.centery = centery;
+                this.width = width;
+                this.color = color;
+            }
+            draw() {
+                c.beginPath()
+                c.fillStyle = this.color;
+                c.rect(this.centerx - this.width / 2, this.centery - this.width / 2, this.width, this.width);
+                c.fill()
+            }
+        }
+
+        class Circle {
+            constructor(centerx, centery, radius, color) {
+                this.centerx = centerx;
+                this.centery = centery;
+                this.radius = radius;
+                this.color = color;
+            }
+            draw() {
+                c.beginPath()
+                c.fillStyle = this.color;
+                c.arc(this.centerx, this.centery, this.radius, 0, Math.PI * 2);
+                c.fill()
+            }
+        }
+
+
+        function rgb() {
+            color = 'rgb(';
+            for (var i = 0; i < 3; i++) {
+                color += Math.floor(Math.random() * 255) + ',';
+            }
+            return color.replace(/\,$/, ')');
+        }
+
+
+        let centerx = canvas.width / 2;
+        let centery = canvas.height / 2;
+        let n = 5
+        let circles = []
+        let squares = []
+        for (let i = 0; i < n; i++) {
+            circles[i] = new Circle(centerx, centery, 200 / (1.414 ** i), rgb());
+            squares[i] = new Square(centerx, centery, 200 / (1.414 ** (i - 1)), rgb())
+        }
+        console.log(circles)
+        console.log(squares)
+        for (let i = 1; i < n; i++) {
+            circles[i].draw()
+            squares[i].draw()
+        }
+    </script>
+</body>
+
+
+</html>
