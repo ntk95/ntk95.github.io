@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+
+</head>
+
+<body>
+    <!-- Dinh nghia 1 the canvas -->
+    <canvas id="canvas"></canvas>
+    <script>
+        //truy cap vao phan tu canvas
+
+        canvas.width = 900
+        canvas.height = 600
+
+        canvas.style.border = "5px solid black"
+
+        const ctx = canvas.getContext('2d')
+
+        //ve doan thang
+        ctx.beginPath();
+        ctx.moveTo(100, 100);
+        ctx.lineTo(200, 100);
+        ctx.lineTo(100, 200);
+        ctx.lineTo(100, 100);
+        ctx.stroke();
+        ctx.fillStyle = 'black'
+        ctx.fill()
+
+        ctx.beginPath();
+        ctx.moveTo(400, 400);
+        ctx.lineTo(400, 300);
+        ctx.lineTo(300, 400);
+        ctx.lineTo(400, 400);
+        ctx.stroke();
+    </script>
+</body>
+
+</html>
