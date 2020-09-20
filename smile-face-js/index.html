@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+
+</head>
+
+<body>
+    <!-- Dinh nghia 1 the canvas -->
+    <canvas id="canvas"></canvas>
+    <script>
+        //truy cap vao phan tu canvas
+
+        canvas.width = 900
+        canvas.height = 600
+
+        canvas.style.border = "5px solid black"
+
+        const ctx = canvas.getContext('2d')
+
+        //ve hinh tron
+        ctx.beginPath();
+        ctx.fillStyle = 'yellow';
+        ctx.arc(450, 300, 200, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = 'black';
+        ctx.arc(350, 200, 25, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = 'black';
+        ctx.arc(550, 200, 25, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = 'black';
+        ctx.arc(450, 270, 10, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = 'black';
+        ctx.arc(440, 280, 10, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = 'black';
+        ctx.arc(460, 280, 10, 0, Math.PI * 2, false);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = 'red';
+        ctx.arc(450, 350, 130, 0, Math.PI, false);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = 'white';
+        ctx.arc(450, 350, 50, 0, Math.PI, false);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = 'orange';
+        ctx.arc(450, 470, 50, Math.PI, 0, false);
+        ctx.fill();
+    </script>
+</body>
+
+</html>
