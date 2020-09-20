@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cờ VN</title>
+
+</head>
+
+<body>
+
+    <canvas id="covietnam" width="500px" height="300px" style="background: red;"></canvas>
+    <script>
+        var canvas = document.getElementById('covietnam');
+        var ctx = canvas.getContext('2d');
+        ctx.beginPath();
+        ctx.fillStyle = "yellow";
+        ctx.moveTo(250, 80);
+        ctx.lineTo(200, 200);
+        ctx.lineTo(320, 125);
+        ctx.lineTo(180, 125);
+        ctx.lineTo(300, 200);
+        ctx.lineTo(250, 80);
+        ctx.closePath();
+        ctx.fill();
+    </script>
+</body>
+
+</html>
