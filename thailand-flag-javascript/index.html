@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+
+</head>
+
+<body>
+    <!-- Dinh nghia 1 the canvas -->
+    <canvas id="canvas"></canvas>
+    <script>
+        //truy cap vao phan tu canvas
+
+        canvas.width = 900
+        canvas.height = 600
+
+        canvas.style.border = "5px solid black"
+
+        const ctx = canvas.getContext('2d')
+
+        //ve hinh chu nhat
+        ctx.beginPath();
+        ctx.fillStyle = 'red'
+        ctx.rect(0, 0, 900, 100)
+        ctx.stroke()
+        ctx.fill()
+
+        ctx.beginPath();
+        ctx.fillStyle = 'white'
+        ctx.rect(0, 100, 900, 100)
+        ctx.stroke()
+        ctx.fill()
+
+        ctx.beginPath();
+        ctx.fillStyle = 'blue'
+        ctx.rect(0, 200, 900, 200)
+        ctx.stroke()
+        ctx.fill()
+
+        ctx.beginPath();
+        ctx.fillStyle = 'white'
+        ctx.rect(0, 400, 900, 100)
+        ctx.stroke()
+        ctx.fill()
+
+        ctx.beginPath();
+        ctx.fillStyle = 'red'
+        ctx.rect(0, 500, 900, 100)
+        ctx.stroke()
+        ctx.fill()
+    </script>
+</body>
+
+</html>
