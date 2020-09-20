@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Example</title>
+
+</head>
+
+<body>
+    <!-- Dinh nghia 1 the canvas -->
+    <canvas id="canvas"></canvas>
+    <script>
+        //truy cap vao phan tu canvas
+        canvas.width = 900
+        canvas.height = 900
+
+        canvas.style.border = "5px solid black"
+
+        const ctx = canvas.getContext('2d')
+
+        //ve hinh chu nhat
+        //class
+
+        class Rect {
+            constructor(x, y, width, height, color) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.color = color
+            }
+
+            draw() {
+                ctx.beginPath()
+                ctx.fillStyle = this.color;
+                ctx.rect(this.x, this.y, this.width, this.height);
+                ctx.fill()
+            }
+        }
+
+        let rect1 = new Rect(0, 0, 100, 100, 'red');
+        console.log(rect1);
+        let rect2 = new Rect(700, 0, 200, 200, 'blue');
+        console.log(rect2);
+        let rect3 = new Rect(600, 800, 300, 100, 'gold');
+        console.log(rect3);
+        let rect4 = new Rect(0, 700, 100, 200, 'green');
+        console.log(rect4);
+        let rect5 = new Rect(300, 400, 300, 100, 'pink');
+        console.log(rect5);
+        let rect6 = new Rect(400, 0, 100, 150, 'gray');
+        console.log(rect6);
+        let rect7 = new Rect(0, 350, 200, 150, 'orange');
+        console.log(rect7);
+        let rect8 = new Rect(700, 350, 200, 200, 'brown');
+        console.log(rect8);
+        let rect9 = new Rect(350, 700, 200, 200, 'violet');
+        console.log(rect9);
+
+        rect1.draw();
+        rect2.draw();
+        rect3.draw();
+        rect4.draw();
+        rect5.draw();
+        rect6.draw();
+        rect7.draw();
+        rect8.draw();
+        rect9.draw();
+    </script>
+</body>
+
+</html>
