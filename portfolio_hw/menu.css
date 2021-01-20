@@ -346,9 +346,6 @@ figure.effect-sadie:hover p {
     margin-bottom: 5px;
 }
 
-
-/* Footer Right */
-
 .footer-distributed .footer-right {
     float: right;
 }
@@ -416,9 +413,6 @@ figure.effect-sadie:hover p {
     font-weight: bold;
     float: right;
 }
-
-
-/* If you don't want the footer to be responsive, remove these media queries */
 
 @media (max-width: 1000px) {
     .footer-distributed {
