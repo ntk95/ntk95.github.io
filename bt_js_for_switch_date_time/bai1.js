@@ -74,7 +74,29 @@ diemso(6.75);
 //Bài 3:
 //Viết hàm translate() có tác dụng dịch từ "Hello" sang 5 thứ tiếng khác nhau (tự chọn)
 //với tham số truyền vào là mã quốc gia, sử dụng switch và mặc định dịch sang tiếng Việt.
+let countryCode;
 
+function translate(countryCode) {
+    let a = "hello"
+    switch (countryCode) {
+        case 33:
+            a = "bonjour";
+            break;
+        case 81:
+            a = "konnichiwa"
+            break;
+        case 86:
+            a = "ni hao";
+            break;
+        case 7:
+            a = "Zdravstvuyte";
+            break;
+        default:
+            a = "xin chao"
+    }
+    return a;
+}
+console.log(translate(countryCode));
 
 
 //Bài 4:
