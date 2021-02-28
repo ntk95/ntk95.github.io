@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
+</head>
+
+<body oncontextmenu='return false' class='snippet-body'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <div class="super_container">
+
+        <header class="header">
+
+            <div class="top_bar">
+                <div class="container">
+                    <div class="row">
+                        <div class="col d-flex flex-row">
+                            <div class="top_bar_contact_item">
+                                <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918577/phone.png" alt=""></div>0395291550
+                            </div>
+                            <div class="top_bar_contact_item">
+                                <div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">gamingshop@gmail.com</a>
+                            </div>
+                            <div class="top_bar_content ml-auto">
+                                <div class="top_bar_menu">
+                                    <ul class="standard_dropdown top_bar_dropdown">
+                                        <li> <a href="#">Tiếng Việt<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li><a href="#">English</a></li>
+                                                <li><a href="#">Chinese</a></li>
+                                                <li><a href="#">Japanese</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                                <div class="top_bar_user">
+                                    <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
+                                    <div><a href="#">Đăng ký</a></div>
+                                    <div><a href="#">Đăng nhập</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header_main">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-2 col-sm-3 col-3 order-1">
+                            <div class="logo_container">
+                                <div class="logo"><a href="#">Gaming</a></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+                            <div class="header_search">
+                                <div class="header_search_content">
+                                    <div class="header_search_form_container">
+                                        <form action="#" class="header_search_form clearfix"> <input type="search" required="required" class="header_search_input" placeholder="Tìm kiếm sản phẩm:...">
+                                            <div class="custom_dropdown" style="display: none;">
+                                                <div class="custom_dropdown_list"> <span class="custom_dropdown_placeholder clc">All Categories</span> <i class="fas fa-chevron-down"></i>
+                                                    <ul class="custom_list clc">
+                                                        <li><a class="clc" href="#">All Categories</a></li>
+                                                        <li><a class="clc" href="#">Computers</a></li>
+                                                        <li><a class="clc" href="#">Laptops</a></li>
+                                                        <li><a class="clc" href="#">Cameras</a></li>
+                                                        <li><a class="clc" href="#">Hardware</a></li>
+                                                        <li><a class="clc" href="#">Smartphones</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div> <button type="submit" class="header_search_button trans_300" value="Submit"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918770/search.png" alt=""></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+                            <div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+                                <div class="wishlist d-flex flex-row align-items-center justify-content-end">
+                                    <div class="wishlist_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918681/heart.png" alt=""></div>
+                                    <div class="wishlist_content">
+                                        <div class="wishlist_text"><a href="#">Yêu thích</a></div>
+                                        <div class="wishlist_count">10</div>
+                                    </div>
+                                </div>
+
+                                <div class="cart">
+                                    <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                                        <div class="cart_icon"> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png" alt="">
+                                            <div class="cart_count"><span>3</span></div>
+                                        </div>
+                                        <div class="cart_content">
+                                            <div class="cart_text"><a href="#">Hóa đơn</a></div>
+                                            <div class="cart_price">3 món hàng</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="main_nav">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="main_nav_content d-flex flex-row">
+
+                                <div class="main_nav_menu">
+                                    <ul class="standard_dropdown main_nav_dropdown">
+                                        <li><a href="#">Trang chủ<i class="fas fa-chevron-down"></i></a></li>
+                                        <li class="hassubs"> <a href="#">Laptop<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li> <a href="#">Lenovo<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">Dell-Ailenware<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">Asus-ROG<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">MSI Gaming<i class="fas fa-chevron-down"></i></a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="hassubs"> <a href="#">Card dồ họa<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+
+                                                <li><a href="#">Asus<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">Gigabyte<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">MSI<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="#">Zotac<i class="fas fa-chevron-down"></i></a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="hassubs"> <a href="#">Linh kiện máy tính<i class="fas fa-chevron-down"></i></a>
+                                            <ul>
+                                                <li><a href="CPU.html">CPU<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="RAM.html">RAM<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="Mainboard.html">Bo mạch chủ<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="PSU.html">Nguồn<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="Case.html">Case<i class="fas fa-chevron-down"></i></a></li>
+                                                <li><a href="SSD.html">SSD<i class="fas fa-chevron-down"></i></a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="blog.html">Tin tức<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="contact.html">Liên hệ<i class="fas fa-chevron-down"></i></a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="menu_trigger_container ml-auto">
+                                    <div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+                                        <div class="menu_burger">
+                                            <div class="menu_trigger_text">menu</div>
+                                            <div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="page_menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="page_menu_content">
+                                <div class="page_menu_search">
+                                    <form action="#"> <input type="search" required="required" class="page_menu_search_input" placeholder="Tìm kiếm sản phẩm:..."> </form>
+                                </div>
+                                <ul class="page_menu_nav">
+                                    <li class="page_menu_item has-children"> <a href="#">Ngôn ngữ<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li><a href="#">Tiếng Việt<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Chinese<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="page_menu_item"> <a href="#">Trang chủ<i class="fa fa-angle-down"></i></a> </li>
+
+                                    <li class="page_menu_item has-children"> <a href="#">Laptop<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li> <a href="#">Lenovo<i class="fs fa-angle-down"></i></a></li>
+                                            <li><a href="#">Dell-Ailenware<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Asus-ROG<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">MSI Gaming<i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="page_menu_item has-children"> <a href="#">Card đồ họa<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li><a href="#">Asus<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Gigabyte<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">MSI<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Zotac<i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="page_menu_item has-children"> <a href="#">Linh kiện máy tính<i class="fa fa-angle-down"></i></a>
+                                        <ul class="page_menu_selection">
+                                            <li><a href="#">CPU<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">RAM<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Mainboard<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">SSD<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Nguồn<i class="fa fa-angle-down"></i></a></li>
+                                            <li><a href="#">Case<i class="fa fa-angle-down"></i></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="page_menu_item"><a href="blog.html">Tin tức<i class="fa fa-angle-down"></i></a></li>
+                                    <li class="page_menu_item"><a href="contact.html">Liên hệ<i class="fa fa-angle-down"></i></a></li>
+                                </ul>
+                                <div class="menu_contact">
+                                    <div class="menu_contact_item">
+                                        <div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>0395291550
+                                    </div>
+                                    <div class="menu_contact_item">
+                                        <div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:gamingshop@gmail.com">gamingshop@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div style="height: 700px"> </div>
+    </div>
+
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
