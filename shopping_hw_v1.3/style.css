@@ -1638,3 +1638,34 @@ select option {
         float: none;
     }
 }
+
+.wallpaper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.Rectangle {
+    width: 1920px;
+    height: 40px;
+    padding: 11px 746px 10px;
+    background-color: #92272d;
+}
+
+.text {
+    width: 428px;
+    height: 19px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, 0.8);
+    right: 700px;
+}
+
+.text .text-style-1 {
+    color: #ffffff;
+}
