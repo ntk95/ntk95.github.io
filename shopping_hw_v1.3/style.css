@@ -1760,3 +1760,69 @@ select option {
 .banner-right img {
     width: 100%;
 }
+
+.header1 {
+    display: flex;
+    width: 1920px;
+    height: 40px;
+    padding: 0 360px;
+    background-color: #92272d;
+}
+
+.title1 {
+    margin: 11px 388px 10px 0;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.title2 {
+    height: 19px;
+    margin: 11px 20px 10px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.title3 {
+    height: 19px;
+    margin: 11px 20px 10px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.title4 {
+    height: 19px;
+    margin: 11px 20px 10px;
+    font-family: NotoSansCJKkr;
+    font-size: 14px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.36;
+    letter-spacing: normal;
+    color: #ffffff;
+}
+
+.title5 {
+    width: 16px;
+    height: 4px;
+    object-fit: contain;
+    color: #ffffff;
+}
