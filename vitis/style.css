@@ -525,6 +525,9 @@ img {
     margin: 170px 240px 24px;
     background-color: #ffdbd5;
     position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .banner-left {
