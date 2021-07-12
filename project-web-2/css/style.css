@@ -1612,3 +1612,7 @@ div.comparisontable ul.row:last-of-type li.legend{
         .product-grid{ margin-bottom: 30px; }
     }
     
+.responsive-img{
+    width: 100%;
+    height: auto;
+}
