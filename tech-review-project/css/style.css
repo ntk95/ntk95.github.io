@@ -1382,7 +1382,7 @@ div.comparisontable ul.row li{
  
 /* the legend column (first li within each row) */
 div.comparisontable ul.row li.legend{
-    background: #6640d8;
+    background: #FF6F61;
     color: white;
     border: none;
     width: 200px;
