@@ -1495,122 +1495,7 @@ div.comparisontable ul.row:last-of-type li.legend{
         margin: 0 0 11px;
     }
 
-    .product-grid{
-        font-family: Arial, Helvetica, sans-serif;
-        text-align: center;
-    }
-    .product-grid .product-image{
-        overflow: hidden;
-        position: relative;
-        z-index: 1;
-    }
-    .product-grid .product-image a.image{ display: block; }
-    .product-grid .product-image img{
-        width: 100%;
-        height: auto;
-    }
-    .product-grid .product-image .img-1{ transition: all 0.3s ease 0s; }
-    .product-grid:hover .product-image .img-1{
-        opacity: 0;
-        transform: translateX(50%);
-    }
-    .product-grid .product-image .img-2{
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        transition: all 0.3s ease 0s;
-    }
-    .product-grid:hover .product-image .img-2{ opacity: 1; }
-    .product-grid .product-links{
-        padding: 0;
-        margin: 0 auto;
-        list-style: none;
-        opacity: 0;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -35px;
-        transition: all 0.3s ease 0s;
-    }
-    .product-grid:hover .product-links{
-        opacity: 1;
-        bottom: 10px;
-    }
-    .product-grid .product-links li{ display: inline-block; }
-    .product-grid .product-links li a{
-        color: #9323a1;
-        background-color: #fff;
-        line-height: 36px;
-        height: 35px;
-        width: 35px;
-        border-radius: 50%;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        display: block;
-        position: relative;
-        z-index: 1;
-        transition: all 0.3s ease 0s;
-    }
-    .product-grid .product-links li a:hover{
-        color: #fff;
-        background-color: #9323a1;
-    }
-    .product-grid .product-links li a:before,
-    .product-grid .product-links li a:after{
-        content: attr(data-tip);
-        color: #9323a1;
-        background-color: #fff;
-        font-size: 12px;
-        line-height: 22px;
-        padding: 0 10px;
-        white-space: nowrap;
-        visibility: hidden;
-        transform: translateX(-50%);
-        position: absolute;
-        left: 50%;
-        top: -38px;
-        transition: all 0.3s ease 0s;
-    }
-    .product-grid .product-links li a:after{
-        content: '';
-        height: 12px;
-        width: 12px;
-        padding: 0;
-        transform: translateX(-50%) rotate(45deg);
-        top: -25px;
-        z-index: -1;
-    }
-    .product-grid .product-links li a:hover:before,
-    .product-grid .product-links li a:hover:after{
-        visibility: visible;
-    }
-    .product-grid .product-content{
-        padding: 15px;
-        transition: all 0.3s ease 0s;
-    }
-    .product-grid:hover .product-content{ box-shadow: 0 0 10px rgba(0,0,0,0.1) inset; }
-    .product-grid .title{
-        font-size: 20px;
-        font-weight: 400;
-        text-transform: capitalize;
-        margin: 0 0 10px;
-    }
-    .product-grid .title a{
-        color: #364a15;
-        transition: all 0.3s ease 0s;
-    }
-    .product-grid .title a:hover{ color: #9323a1; }
-    .product-grid .price{
-        color: #9323a1;
-        font-size: 18px;
-        font-weight: 400;
-    }
-    @media screen and (max-width: 990px){
-        .product-grid{ margin-bottom: 30px; }
-    }
+    
     
 .responsive-img{
     width: 100%;
@@ -1622,3 +1507,159 @@ div.comparisontable ul.row:last-of-type li.legend{
 }
 
 
+/* -------------- Product Grid Style --------------- */
+.product-grid {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.product-grid .product-item {
+    width: 25%;
+    padding: 15px;
+}
+
+@media (max-width: 992px) {
+    .product-grid .product-item {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid .product-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .product-grid .product-item {
+        width: 100%;
+    }
+}
+
+.product-grid .product-single {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.product-grid .product-img,
+.product-grid .product-content {
+    position: relative;
+    width: 100%;
+    background: #f1f1f1;
+    overflow: hidden;
+}
+
+.product-grid .product-img img {
+    display: block;
+    width: 100%;
+    transition: .3s;
+}
+
+/* --- Product Grid 3 --- */
+.product-grid.grid-3 .product-single:hover {
+    box-shadow: 0 0 6px #999999;
+}
+
+.product-grid.grid-3 .product-single:hover img {
+    transform: scale(1.1);
+    -webkit-filter: blur(4px);
+    filter: blur(4px);
+}
+
+.product-grid.grid-3 .product-price {
+    position: absolute;
+    width: 100%;
+    top: -50px;
+}
+
+.product-grid.grid-3 .product-price span:first-child {
+    display: inline-block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    padding: 60px 0 0 55px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    background: #1dbf71;
+    border-radius: 100px;
+}
+
+.product-grid.grid-3 .product-price span:last-child {
+    display: inline-block;
+    float: right;
+    width: 100px;
+    height: 100px;
+    margin-right: -50px;
+    padding: 60px 0 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #ffffff;
+    background: #ee0000;
+    border-radius: 100px;
+}
+
+.product-grid.grid-3 .product-content {
+    padding: 15px 0 0 0;
+    background: #f1f1f1;
+}
+
+.product-grid.grid-3 .product-title,
+.product-grid.grid-3 .product-ratting {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.product-grid.grid-3 .product-title h2 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.product-grid.grid-3 .product-title h2 a {
+    color: #666666;
+}
+
+.product-grid.grid-3 .product-title h2 a:hover {
+    color: #666666;
+}
+
+.product-grid.grid-3 .product-ratting i {
+    display: inline-block;
+    font-size: 16px;
+    color: #FF6F61;
+}
+
+.product-grid.grid-3 .product-action {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+    transition: .3s;
+}
+
+.product-grid.grid-3 .product-action a {
+    display: inline-block;
+    width: calc(50% - 1px);
+    height: 40px;
+    padding: 13px 0;
+    font-size: 13px;
+    font-weight: 300;
+    color: #ffffff;
+    background: #FF6F61;
+}
+
+.product-grid.grid-3 .product-action a:first-child {
+    margin-right: 2px;
+}
+
+.product-grid.grid-3 .product-action a i {
+    margin-right: 3px;
+}
+
+.product-grid.grid-3 .product-action a:hover {
+    background: #252525;
+}
