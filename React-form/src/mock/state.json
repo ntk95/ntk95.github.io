@@ -1,0 +1,32 @@
+{
+  "listStates": [
+    {
+      "id": "1",
+      "name": "Hà Nội"
+    },
+    {
+      "id": "2",
+      "name": "Tp.HCM"
+    },
+    {
+      "id": "3",
+      "name": "Đà Nẵng"
+    },
+    {
+      "id": "4",
+      "name": "Cần Thơ"
+    },
+    {
+      "id": "5",
+      "name": "Hải Phòng"
+    },
+    {
+      "id": "6",
+      "name": "Bình Dương"
+    },
+    {
+      "id": "7",
+      "name": "Huế"
+    }
+  ]
+}
